@@ -1,4 +1,10 @@
-@import "tailwindcss";
+/* 删除这一行 */
+/* @import "tailwindcss"; */
+
+/* Tailwind 指令 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #ffffff;
@@ -24,3 +30,5 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Your custom styles below */
