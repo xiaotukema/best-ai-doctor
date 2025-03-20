@@ -22,11 +22,11 @@ export async function POST(req: Request) {
     console.log("API响应:", text);
 
     return NextResponse.json({ response: text });
-  } catch (error) {
+  } catch (error: any) {
     console.error('Gemini API error:', error);
     return NextResponse.json({ 
       error: '处理请求时出错', 
-      details: error.message 
+      details: error?.message || '未知错误'
     }, { status: 500 });
   }
 }
