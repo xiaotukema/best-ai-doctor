@@ -123,7 +123,7 @@ export default function Home() {
     <div className="min-h-screen bg-white dark:bg-gray-900 flex flex-col">
       <header className="border-b border-gray-200 dark:border-gray-800 py-4">
         <div className="max-w-6xl mx-auto px-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Your Doctor Homie</h1>
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Your Free Doctor</h1>
         </div>
       </header>
 
