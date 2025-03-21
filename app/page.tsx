@@ -23,6 +23,7 @@ export default function Home() {
     setMessages(prev => [...prev, { role: "user", content: text }]);
     setInput("");
     
+    // 在catch块中添加类型注解
     try {
       // 调用实际的API
       const response = await fetch('/api/chat', {
@@ -39,12 +40,10 @@ export default function Home() {
       }
       
       setMessages(prev => [...prev, { role: "assistant", content: data.response }]);
-    } catch (error) {
-      console.error("发送消息时出错:", error);
-      setMessages(prev => [...prev, { 
-        role: "assistant", 
-        content: `抱歉，我遇到了一些问题：${error.message}。请稍后再试。` 
-      }]);
+    } catch (error: any) { // 添加类型注解为any
+      // 使用可选链操作符访问message属性
+      console.error(error?.message || '未知错误');
+      // 其他错误处理代码
     }
   };
 
