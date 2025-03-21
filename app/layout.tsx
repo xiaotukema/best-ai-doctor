@@ -11,14 +11,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {children}
-      </body>
+      <head>
+        <meta name="google-site-verification" content="nXMDyiCExnXNaBrPok09WtuDlGJCbYwpOHfP2LGcxUM" />
+      </head>
+      <body>{children}</body>
     </html>
-  );
+  )
 }
